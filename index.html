@@ -1,90 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mahfuzur Rahman | Cybersecurity Architect</title>
-  <meta name="description" content="Enterprise Cybersecurity Architect specializing in Zero Trust, Identity Architecture, and Quantum-Resilient Security Design.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mahfuzur Rahman | GitHub | Cybersecurity Architect (Zero Trust, Identity)</title>
+
+  <meta name="description" content="Official GitHub presence of Mahfuzur Rahman, Cybersecurity Architect specializing in Zero Trust, identity and trust architecture, cloud security, and cryptographic strategy. Architecture patterns, notes, and publications links." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://rhmahfuzurrahman.github.io/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Mahfuzur Rahman | Cybersecurity Architect">
-  <meta property="og:description" content="Zero Trust | Identity & Trust Architecture | Cloud & Cryptographic Security">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rhmahfuzurrahman.github.io">
+  <meta property="og:title" content="Mahfuzur Rahman | GitHub | Cybersecurity Architect" />
+  <meta property="og:description" content="Zero Trust, identity and trust architecture, cloud security, and cryptographic strategy. Architecture patterns and security design notes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rhmahfuzurrahman.github.io/" />
 
-  <!-- Structured Data -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mahfuzur Rahman | GitHub | Cybersecurity Architect" />
+  <meta name="twitter:description" content="Zero Trust, identity and trust architecture, cloud security, and cryptographic strategy." />
+
+  <!-- Structured Data: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mahfuzur Rahman",
-    "jobTitle": "Enterprise Cybersecurity Architect",
-    "url": "https://rhmahfuzurrahman.github.io",
+    "alternateName": ["Md Mahfuzur Rahman", "Mahfuz"],
+    "jobTitle": "Cybersecurity Architect",
+    "url": "https://rhmahfuzurrahman.github.io/",
     "sameAs": [
-      "https://www.linkedin.com/in/rh-mahfuzur-rahman/",
       "https://github.com/rhmahfuzurrahman",
+      "https://www.linkedin.com/in/rh-mahfuzur-rahman/",
       "https://www.findmephotography.com/about-mahfuzur-rahman"
     ]
   }
   </script>
 
+  <!-- Structured Data: Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mahfuzur Rahman - GitHub Presence",
+    "url": "https://rhmahfuzurrahman.github.io/"
+  }
+  </script>
+
   <style>
-    body {
+    :root{
+      --bg: #070B14;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.04);
+      --text: #E9EEF6;
+      --muted: rgba(233,238,246,0.72);
+      --faint: rgba(233,238,246,0.55);
+      --line: rgba(233,238,246,0.14);
+      --link: #4DA3FF;
+      --link2: #8BC3FF;
+      --shadow: 0 18px 40px rgba(0,0,0,0.45);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0A0F1C;
-      color: #E6EDF3;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 50% 75%, rgba(77,163,255,0.10), transparent 60%),
+        radial-gradient(900px 500px at 70% 10%, rgba(140,70,255,0.10), transparent 55%),
+        radial-gradient(900px 700px at 25% 10%, rgba(0,229,255,0.07), transparent 55%),
+        linear-gradient(180deg, #060813 0%, #070B14 45%, #050815 100%);
       display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+    }
+
+    .wrap{
+      width: min(980px, 100%);
+    }
+
+    .card{
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      backdrop-filter: blur(10px);
+    }
+
+    header{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      text-align: center;
+      padding: 6px 4px 0;
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(30px, 3.2vw, 40px);
+      letter-spacing: 0.2px;
+      line-height: 1.15;
+    }
+
+    .subtitle{
+      margin: 0;
+      font-size: clamp(16px, 1.7vw, 18px);
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .tagline{
+      margin: 12px auto 0;
+      max-width: 58ch;
+      color: var(--faint);
+      font-size: 15.5px;
+      line-height: 1.7;
+    }
+
+    .links{
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      color: var(--faint);
     }
-    .container {
-      max-width: 700px;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-weight: 400;
-      color: #8B9CB3;
-      margin-bottom: 30px;
-    }
-    p {
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-    a {
-      color: #4DA3FF;
+
+    .links a{
+      color: var(--link);
       text-decoration: none;
-      margin: 0 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(77,163,255,0.25);
+      background: rgba(77,163,255,0.06);
     }
-    a:hover {
-      text-decoration: underline;
+    .links a:hover{
+      border-color: rgba(77,163,255,0.55);
+      background: rgba(77,163,255,0.10);
+    }
+
+    .divider{
+      margin: 26px 0;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 860px){
+      .grid{
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+      }
+      header{ text-align: left; }
+      .links{ justify-content: flex-start; }
+      .tagline{ margin-left: 0; }
+    }
+
+    .box{
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      background: rgba(0,0,0,0.18);
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--faint);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .small{
+      margin-top: 12px;
+      color: var(--faint);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .small a{
+      color: var(--link2);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(139,195,255,0.5);
+    }
+    .small a:hover{
+      border-bottom-color: rgba(139,195,255,0.85);
+    }
+
+    .repo{
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .repo a{
+      display: block;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .repo a:hover{
+      border-color: rgba(77,163,255,0.35);
+      background: rgba(77,163,255,0.06);
+    }
+
+    .repo-title{
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .repo-desc{
+      color: var(--faint);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    footer{
+      text-align: center;
+      margin-top: 18px;
+      color: rgba(233,238,246,0.45);
+      font-size: 13px;
+    }
+
+    /* Accessibility */
+    a:focus{
+      outline: 2px solid rgba(77,163,255,0.7);
+      outline-offset: 2px;
+      border-radius: 10px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Mahfuzur Rahman</h1>
-    <h2>Cybersecurity Architect | Zero Trust | Identity & Trust Architecture</h2>
+  <main class="wrap">
+    <section class="card" aria-label="Mahfuzur Rahman GitHub presence">
 
-    <p>
-      Designing identity-first, risk-driven security architectures that reduce blast radius,
-      enforce least privilege, and align governance with technical control planes.
-    </p>
+      <header>
+        <h1>Mahfuzur Rahman</h1>
+        <p class="subtitle">Cybersecurity Architect | Zero Trust | Identity and Trust Architecture</p>
+        <p class="tagline">
+          Designing identity-first, risk-driven security architectures that reduce blast radius, enforce least privilege, and align governance with technical control planes.
+        </p>
 
-    <div>
-      <a href="https://www.linkedin.com/in/rh-mahfuzur-rahman/">LinkedIn</a>
-      |
-      <a href="https://github.com/rhmahfuzurrahman">GitHub</a>
-      |
-      <a href="https://www.findmephotography.com/about-mahfuzur-rahman">Website</a>
-    </div>
-  </div>
+        <nav class="links" aria-label="Primary links">
+          <a href="https://www.linkedin.com/in/rh-mahfuzur-rahman/" rel="me">LinkedIn</a>
+          <a href="https://github.com/rhmahfuzurrahman" rel="me">GitHub Profile</a>
+          <a href="https://www.findmephotography.com/about-mahfuzur-rahman">Website</a>
+        </nav>
+
+        <p class="small">
+          Official GitHub profile:
+          <a href="https://github.com/rhmahfuzurrahman">https://github.com/rhmahfuzurrahman</a>
+        </p>
+      </header>
+
+      <div class="divider"></div>
+
+      <section class="grid" aria-label="Focus areas and featured work">
+        <div class="box">
+          <h2>Focus Areas</h2>
+          <ul>
+            <li>Zero Trust architecture and trust boundary design</li>
+            <li>Identity governance, IAM, and service-to-service authentication</li>
+            <li>Cloud security architecture (AWS and hybrid enterprise)</li>
+            <li>Security telemetry, auditability, and evidence-driven governance</li>
+            <li>Cryptographic trust strategy and migration readiness</li>
+          </ul>
+
+          <p class="small">
+            If you are looking for practical architecture reasoning, trade-offs, and patterns, start with the repositories below.
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>Featured Repositories</h2>
+          <div class="repo">
+            <a href="https://github.com/rhmahfuzurrahman/security-architecture-patterns">
+              <div class="repo-title">security-architecture-patterns</div>
+              <div class="repo-desc">Architecture patterns written for real enterprise constraints: intent, trade-offs, and failure modes.</div>
+            </a>
+
+            <a href="https://github.com/rhmahfuzurrahman/security-architecture-notes">
+              <div class="repo-title">security-architecture-notes</div>
+              <div class="repo-desc">Structured notes on identity, trust models, cloud controls, and security design reasoning.</div>
+            </a>
+
+            <a href="https://github.com/rhmahfuzurrahman/secyork-technology">
+              <div class="repo-title">secyork-technology</div>
+              <div class="repo-desc">SecYork materials: consulting focus areas, security architecture topics, and field notes.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Mahfuzur Rahman. Cybersecurity architecture notes and references.
+      </footer>
+
+    </section>
+  </main>
 </body>
 </html>
